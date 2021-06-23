@@ -1,0 +1,13 @@
+CREATE SCHEMA `attendance_system_using_face_recognition`;
+
+CREATE TABLE `student` (
+  `department` varchar(45) NOT NULL,
+  `course` varchar(45) NOT NULL,
+  `year` varchar(45) NOT NULL,
+  `semester` varchar(45) NOT NULL,
+  `student_name` varchar(45) NOT NULL,
+  `roll_no` varchar(45) NOT NULL,
+  `teacher_name` varchar(45) NOT NULL,
+  `photo_sample` varchar(45) NOT NULL,
+  PRIMARY KEY (`roll_no`)
+) ;

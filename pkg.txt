@@ -1,0 +1,7 @@
+colorama
+regex
+pathspec
+mypy-extensions
+click
+appdirs
+black
