@@ -2,7 +2,7 @@ import os
 from tkinter import (Button, Frame, Label, LabelFrame, StringVar, Tk, messagebox, ttk)
 from tkinter.constants import (BOTH, BOTTOM, END, HORIZONTAL, RIDGE, RIGHT, VERTICAL, W, X, Y)
 
-import cv2
+# import cv2
 import mysql.connector
 from PIL import Image, ImageTk
 
@@ -251,7 +251,7 @@ class Student:
 
     # fetch_data function definition
     def fetch_data(self):
-        cob = mysql.connector.connect(host = "localhost", username = "root", password = "toor",
+        cob = mysql.connector.connect(host = "localhost", username = "root", password = "ddos",
                                       database = "attendance_system_using_face_recognition")
         my_cursor = cob.cursor()
         my_cursor.execute("select * from student")
@@ -288,7 +288,7 @@ class Student:
         else:
             try:
                 cob = mysql.connector.connect(
-                    host = "localhost", username = "root", password = "toor",
+                    host = "localhost", username = "root", password = "ddos",
                     database = "attendance_system_using_face_recognition")
                 my_cursor = cob.cursor()
                 if self.var_photo_sample.get() == "":
@@ -317,7 +317,7 @@ class Student:
                 var_update = messagebox.askyesno("Update data", "Do you want to update Student details ?",
                                                  parent = self.root)
                 if var_update > 0:
-                    cob = mysql.connector.connect(host = "localhost", username = "root", password = "toor",
+                    cob = mysql.connector.connect(host = "localhost", username = "root", password = "ddos",
                                                   database = "attendance_system_using_face_recognition")
                     my_cursor = cob.cursor()
                     if self.var_photo_sample.get() == "":
@@ -349,7 +349,7 @@ class Student:
                 delete = messagebox.askyesno("Delete Data", "Do you want to delete this student' details ?",
                                              parent = self.root)
                 if delete > 0:
-                    cob = mysql.connector.connect(host = "localhost", username = "root", password = "toor",
+                    cob = mysql.connector.connect(host = "localhost", username = "root", password = "ddos",
                                                   database = "attendance_system_using_face_recognition")
                     my_cursor = cob.cursor()
                     my_cursor.execute("delete from student where roll_no = %s", (self.var_roll_no.get(),))
